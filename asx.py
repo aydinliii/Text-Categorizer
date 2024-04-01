@@ -30,7 +30,7 @@ def extract_text_from_url(url):
 
 
 # Map predicted label to category name
-categories = {0: 'Politics', 1: 'Sport', 2: 'Technology', 3: 'Entertainment', 4: 'Business', }
+categories = {0: 'Politics', 1: 'Sport', 2: 'Technology', 3: 'Entertainment-Daily Life', 4: 'Business', }
 
 
 # Function to classify text
@@ -46,7 +46,7 @@ def classify_text(text):
         predicted_label = model.predict(text_tfidf)
 
         # Map predicted label to category name
-        categories = {0: 'Politics', 1: 'Sport', 2: 'Technology', 3: 'Entertainment', 4: 'Business'}
+        categories = {0: 'Politics', 1: 'Sport', 2: 'Technology', 3: 'Entertainment-Daily Life', 4: 'Business'}
         predicted_category = categories[predicted_label[0]]
 
         # Show predicted category in a message box
